@@ -1,0 +1,118 @@
+.main {
+  margin-top: 60px;
+}
+/* This ensures the items remains in a grid structure */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+
+.product-container {  
+  padding-top: 40px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-right: 0.1px solid  rgb(234, 220, 220);
+  border-bottom: 0.1px solid  rgb(234, 220, 220);;
+ 
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image-container {
+    /* This makes the image in center along with height initialized to 180px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+.product-image {
+ max-width: 100%;
+  max-height: 100%;
+}
+
+.product-name {
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+
+
+.product-price {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-quantity-container {
+  margin-bottom: 17px;
+}
+
+.product-spacer {
+  flex: 1;
+}
+
+
+.add-to-cart-button {
+    /* This is used to add color to the add to cart button */
+    width: 100%;
+    padding: 8px;
+    border-radius: 50px;
+    font-weight: 500;
+    color: white;
+    background-color: #29a82f;
+    border: none;
+    font-size: 1rem;
+}
+
+.add-to-cart-button:hover{
+   background-color: #6ff775;
+    transition: 0.8s ease;
+}
+
+/* Media query is used for the responsiveness of the project */
+@media (max-width: 2000px) {
+  .products-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media (max-width: 1600px) {
+  .products-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  .products-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+    /* This makes the product container responsive */
+  .products-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+/* This makes the product in proper format */
